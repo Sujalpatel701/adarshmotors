@@ -1,0 +1,118 @@
+body{
+    background-color: #0e1f0b;
+}
+.navbar-brand{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+.custom-nav-item:hover{
+    background-color: yellowgreen;
+    border: solid 1px yellowgreen;
+    border-radius: 15px;
+    color: aliceblue;
+}
+
+.vid-parent{
+    position: relative;
+}
+.remove-vid-marg{
+    margin: 0px;
+    padding: 0px;
+}
+video{
+    width: 100%;
+    height: 100%;
+}
+
+.vid-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:#0e1f0b;
+    z-index: 1;
+    opacity: 0.7;
+}
+
+.vid-content{
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: white;
+}
+.spam-name{
+    font-family: 'Ubuntu', sans-serif;
+    color:#26c70a;
+}
+
+.bottom-banner{
+    background-color: #0e1f0b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.col-sm-4{
+    padding: 10px;
+}
+.carsshow{
+    background-color: #0e1f0b;
+}
+.custom-image {
+    width: 300px;
+    height: 200px;
+}
+#contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #0e1f0b;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+    width: 100%;
+}
+
+#contact1 {
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#0e1f0b; 
+}
+#form1{
+    width: 100%;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color:#0e1f0b; 
+}
+
+
+@media screen and (min-width:0px) and (max-width: 750px){
+    .vid-content{
+        font-size: 0.5em;
+        top: 18%;
+    }
+    .bottom-banner{
+        font-size: 1em;
+    }
+    .tutorial1{
+    font-size: 1.2em;
+    padding: 5px;
+    margin-right: -50%;
+    margin-left: -50%;
+    
+    }
+}
