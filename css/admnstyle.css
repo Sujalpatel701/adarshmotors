@@ -3,22 +3,22 @@
     align-items: center;
 }
 
-/* Style the "ADMIN" text */
+
 .admin-title {
     font-size: 50px;
     color:  yellowgreen;
     font-family: 'Ubuntu', sans-serif;
-    margin-right: 5px; /* Adjust the space between "ADMIN" and the line */
+    margin-right: 5px; 
 }
 
-/* Style the line div */
+
 .separator-line {
     border-left: 3px solid white;
     height: 70px;
-    padding-right: 10px; /* Adjust the height of the line */
+    padding-right: 10px; 
 }
 
-/* Style the anchor tag */
+
 #adarsha{
     font-size: 35px;
     color: yellowgreen;
