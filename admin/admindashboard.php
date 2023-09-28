@@ -12,6 +12,13 @@
 </head>
 <body>
     <nav class="navbar navbar-dark fixed-top" style="background-color:  #0e1f0b; padding: 10px;color: white;">
-<a href="admindashboard.php" style="font-size:40px;color: white;font-family: 'Ubuntu', sans-serif;">ADARSH <small>MOTORS</small></a></nav>
+    <div class="admin-container">
+        <div class="admin-title">ADMIN</div>
+        <div class="separator-line"></div>
+        <a id="adarsha" class="navbar-brand" href="admindashboard.php">
+            ADARSH <small>MOTORS</small>
+        </a>
+    </div>
+    </nav>
 </body>
 </html>
