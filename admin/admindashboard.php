@@ -21,4 +21,57 @@
     </div>
     </nav>
 </body>
+<div class="container-fluid mb-5" style="margin-top: 90px;">
+<div class="row" style="">
+    <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b;">
+        <div class="sidebar-sticky">
+            <ul class="nav flex-column">
+                <li class="nav-item mb-3">
+                    <a class="nav-link active" href="admindashboard.php">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminwork.php">
+                        <i class="fab fa-accessible-icon"></i>
+                        Work Order
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminmechanic.php">
+                        <i class="fas fa-users"></i>
+                        Mechanic
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminrequest.php">
+                        <i class="fas fa-align-center"></i>
+                        Requests
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="admincontact.php">
+                        <i class="fas fa-table"></i>
+                        Contact
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminsellcar.php">
+                        <i class="fas fa-table"></i>
+                        Sell Car
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminlogout.php">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div>cuiasdhbfcdbfvhasdj</div>
+  </div>
+</div>
 </html>
