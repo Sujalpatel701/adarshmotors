@@ -21,57 +21,55 @@
     </div>
     </nav>
 </body>
-<div class="container-fluid mb-5" style="margin-top: 90px;">
-<div class="row" style="">
-    <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b;">
-        <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-                <li class="nav-item mb-3">
-                    <a class="nav-link active" href="admindashboard.php">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminwork.php">
-                        <i class="fab fa-accessible-icon"></i>
-                        Work Order
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminmechanic.php">
-                        <i class="fas fa-users"></i>
-                        Mechanic
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminrequest.php">
-                        <i class="fas fa-align-center"></i>
-                        Requests
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="admincontact.php">
-                        <i class="fas fa-table"></i>
-                        Contact
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminsellcar.php">
-                        <i class="fas fa-table"></i>
-                        Sell Car
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminlogout.php">
-                        <i class="fas fa-sign-out-alt"></i>
-                        Logout
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <div>cuiasdhbfcdbfvhasdj</div>
-  </div>
+
+
+<div class="container-fluid mb-5" style="margin-top: 110px; padding-left: 30px;">
+    <div class="row">
+        <!-- Sidebar -->
+        <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius: 30px; margin-right: 30px;">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="admindashboard.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminuser.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fab fa-accessible-icon"></i>
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-users"></i>
+                            Update/Add
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-align-center"></i>
+                            Feedback
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div> 
+            <div class="card-body">
+                    <h4 class="card-title">Number of brand</h4>
+                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
+            </div>
+            <div class="card-body">
+                    <h4 class="card-title">Number of Model</h4>
+                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
+            </div>  
+            <div class="card-body">
+                    <h4 class="card-title">Number of Parts</h4>
+                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
+            </div>      
+    </div>
 </div>
+
 </html>
