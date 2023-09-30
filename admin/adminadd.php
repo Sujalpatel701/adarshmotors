@@ -85,11 +85,23 @@
     <h5>--> FOR adding New Model</h5>
     <label for="exampleFormControlSelect1">Select Brand</label>
     <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
+        <?php
+        $host = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "adarshmotors";
+            $conn = new mysqli($host, $username, $password, $dbname);
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
+            $sql = "SELECT brand_name FROM brand";
+            $result = $conn->query($sql);
+            if ($result && mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option>" . $row['brand_name'] . "</option>";
+                }
+            }
+        ?>
     </select>
     <label for="">New Model</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Model name">
