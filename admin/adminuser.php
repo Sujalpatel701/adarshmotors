@@ -18,42 +18,55 @@
         <a id="adarsha" class="navbar-brand" href="admindashboard.php">
             ADARSH <small>MOTORS</small>
         </a>
+        <div class="separator-line"></div>
+        <div class="admin-title">User</div>
     </div>
     </nav>
 </body>
 <div class="container-fluid mb-5" style="margin-top: 110px;padding-left:30px">
 <div class="row" style="">
-    <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius:30px;margin-right:30px;">
-        <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="admindashboard.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="" style="color:aliceblue;font-size:30px">
-                        <i class="fab fa-accessible-icon"></i>
-                        users
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminadd.php" style="color:aliceblue;font-size:30px">
+<nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius: 30px; margin-right: 30px;">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="admindashboard.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminuser.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fab fa-accessible-icon"></i>
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminadd.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-users"></i>
+                            add
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminupdate.php" style="color:aliceblue;font-size:30px">
                         <i class="fas fa-users"></i>
-                        update/add
+                        update
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a class="nav-link" href="" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-align-center"></i>
-                        feedback
+                    <a class="nav-link" href="admindelete.php" style="color:aliceblue;font-size:30px">
+                        <i class="fas fa-users"></i>
+                        delete
                     </a>
                 </li>
-                
-            </ul>
-        </div>
-    </nav>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminfeedback.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-align-center"></i>
+                            Feedback
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     <div>
     <table class="table">
   <thead class="thead-dark">

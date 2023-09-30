@@ -19,7 +19,7 @@
             ADARSH <small>MOTORS</small>
         </a>
         <div class="separator-line"></div>
-        <div class="admin-title">FeedBack</div>
+        <div class="admin-title">delete</div>
     </div>
     </nav>
 </body>
@@ -68,62 +68,75 @@
             </div>
         </nav>
     <div>
-    <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">feedbacks of users there</th>
-      <th scope="col">First</th>
-      <th scope="col">Lauyh</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-  </tbody>
-</table>
+    
+    <div class="form-group">
+    <form action="">
+    <h5>--> FOR Deleting Brand</h5>
+    <label for="exampleFormControlSelect1">Select Brand</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Brand</button>
+    </form>
+  </div>
+  <div class="form-group">
+    <form action="">
+    <h5>--> FOR Deleting Model</h5>
+    <label for="exampleFormControlSelect1">Select Brand</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="">Select Model</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select><br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Model</button>
+    </form>
+  </div>
+  <div class="form-group">
+    <form action="">
+    <h5>--> FOR Deleting Part</h5>
+    <label for="exampleFormControlSelect2">Select Brand</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="exampleFormControlSelect2">Select Model</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="">Select Part</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Part</button>
+    </form>
+  </div>
+
 </div>
 </div>
 </div>

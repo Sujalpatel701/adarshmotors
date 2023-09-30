@@ -19,10 +19,10 @@
             ADARSH <small>MOTORS</small>
         </a>
         <div class="separator-line"></div>
-        <div class="admin-title">FeedBack</div>
+        <div class="admin-title">update</div>
     </div>
     </nav>
-</body>
+
 <div class="container-fluid mb-5" style="margin-top: 110px;padding-left:30px">
 <div class="row" style="">
 <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius: 30px; margin-right: 30px;">
@@ -68,63 +68,81 @@
             </div>
         </nav>
     <div>
-    <table class="table">
-  <thead class="thead-dark">
-    <tr>
-      <th scope="col">feedbacks of users there</th>
-      <th scope="col">First</th>
-      <th scope="col">Lauyh</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
-  </tbody>
-</table>
+    <div class="form-group">
+  <form action="">
+    <h5>--> FOR Updating Brand</h5>
+    <label for="updateBrandSelect">Select Brand</label>
+    <select class="form-control" id="updateBrandSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <!-- Add fields for updating brand information here -->
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Brand</button>
+  </form>
+</div>
+<div class="form-group">
+  <form action="">
+    <h5>--> FOR Updating Model</h5>
+    <label for="updateModelBrandSelect">Select Brand</label>
+    <select class="form-control" id="updateModelBrandSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="updateModelSelect">Select Model</label>
+    <select class="form-control" id="updateModelSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <!-- Add fields for updating model information here -->
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Model</button>
+  </form>
+</div>
+<div class="form-group">
+  <form action="">
+    <h5>--> FOR Updating Part</h5>
+    <label for="updatePartBrandSelect">Select Brand</label>
+    <select class="form-control" id="updatePartBrandSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="updatePartModelSelect">Select Model</label>
+    <select class="form-control" id="updatePartModelSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="updatePartSelect">Select Part</label>
+    <select class="form-control" id="updatePartSelect">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <!-- Add fields for updating part information here -->
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Part</button>
+  </form>
+</div>
+
 </div>
 </div>
 </div>
+</body>
 </html>

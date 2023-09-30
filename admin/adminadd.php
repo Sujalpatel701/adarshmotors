@@ -18,50 +18,69 @@
         <a id="adarsha" class="navbar-brand" href="admindashboard.php">
             ADARSH <small>MOTORS</small>
         </a>
+        <div class="separator-line"></div>
+        <div class="admin-title">Add</div>
     </div>
     </nav>
 </body>
 <div class="container-fluid mb-5" style="margin-top: 110px;padding-left:30px">
 <div class="row" style="">
-    <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius:30px;margin-right:30px;">
-        <div class="sidebar-sticky">
-            <ul class="nav flex-column">
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="admindashboard.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-tachometer-alt"></i>
-                        Dashboard
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminuser.php" style="color:aliceblue;font-size:30px">
-                        <i class="fab fa-accessible-icon"></i>
-                        users
-                    </a>
-                </li>
-                <li class="nav-item mb-3">
-                    <a class="nav-link" href="adminadd.php" style="color:aliceblue;font-size:30px">
+<nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius: 30px; margin-right: 30px;">
+            <div class="sidebar-sticky">
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="admindashboard.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-tachometer-alt"></i>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminuser.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fab fa-accessible-icon"></i>
+                            Users
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminadd.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-users"></i>
+                            add
+                        </a>
+                    </li>
+                    <li class="nav-item mb-3">
+                    <a class="nav-link" href="adminupdate.php" style="color:aliceblue;font-size:30px">
                         <i class="fas fa-users"></i>
-                        update/add
+                        update
                     </a>
                 </li>
                 <li class="nav-item mb-3">
-                    <a class="nav-link" href="" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-align-center"></i>
-                        feedback
+                    <a class="nav-link" href="admindelete.php" style="color:aliceblue;font-size:30px">
+                        <i class="fas fa-users"></i>
+                        delete
                     </a>
                 </li>
-                
-            </ul>
-        </div>
-    </nav>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminfeedback.php" style="color: aliceblue; font-size: 30px;">
+                            <i class="fas fa-align-center"></i>
+                            Feedback
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     <div>
-    <form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Email address</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    
+<div class="form-group">
+    <form action="">
+    <h5>--> FOR adding New Brand</h5>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Brand name">
+    <input type="file" class="form-control-file" id="logo of brand"><br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Brand</button>
+    </form>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect1">Example select</label>
+    <form action="">
+    <h5>--> FOR adding New Model</h5>
+    <label for="exampleFormControlSelect1">Select Brand</label>
     <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
@@ -69,28 +88,42 @@
       <option>4</option>
       <option>5</option>
     </select>
+    <label for="">New Model</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Model name">
+    <input type="file" class="form-control-file" id="logo of brand">
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Model</button>
+    </form>
   </div>
   <div class="form-group">
-    <label for="exampleFormControlSelect2">Example multiple select</label>
-    <select multiple class="form-control" id="exampleFormControlSelect2">
+    <form action="">
+    <h5>--> FOR adding New Part</h5>
+    <label for="exampleFormControlSelect2">Select Brand</label>
+    <select class="form-control" id="exampleFormControlSelect1">
       <option>1</option>
       <option>2</option>
       <option>3</option>
       <option>4</option>
       <option>5</option>
     </select>
+    <label for="exampleFormControlSelect2">Select Model</label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <label for="">New Part</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Part name">
+    <label for="">New Part Price</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Part Price">
+    <input type="file" class="form-control-file" id="logo of brand">
+    <br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Part</button>
+    </form>
   </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Example textarea</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <form>
-  <div class="form-group">
-    <label for="exampleFormControlFile1">Example file input</label>
-    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-  </div>
-</form>
-</form>
+
 </div>
 </div>
 </div>

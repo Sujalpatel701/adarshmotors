@@ -18,6 +18,8 @@
         <a id="adarsha" class="navbar-brand" href="admindashboard.php">
             ADARSH <small>MOTORS</small>
         </a>
+        <div class="separator-line"></div>
+        <div class="admin-title">Dashboard</div>
     </div>
     </nav>
 </body>
@@ -42,13 +44,25 @@
                         </a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="" style="color: aliceblue; font-size: 30px;">
+                        <a class="nav-link" href="adminadd.php" style="color: aliceblue; font-size: 30px;">
                             <i class="fas fa-users"></i>
-                            Update/Add
+                            add
                         </a>
                     </li>
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="" style="color: aliceblue; font-size: 30px;">
+                    <a class="nav-link" href="adminupdate.php" style="color:aliceblue;font-size:30px">
+                        <i class="fas fa-users"></i>
+                        update
+                    </a>
+                </li>
+                <li class="nav-item mb-3">
+                    <a class="nav-link" href="admindelete.php" style="color:aliceblue;font-size:30px">
+                        <i class="fas fa-users"></i>
+                        delete
+                    </a>
+                </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link" href="adminfeedback.php" style="color: aliceblue; font-size: 30px;">
                             <i class="fas fa-align-center"></i>
                             Feedback
                         </a>
