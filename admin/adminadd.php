@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <script src="jquery.js"></script>
     <link rel="stylesheet" href="../css/admnstyle.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -70,13 +71,15 @@
     <div>
     
 <div class="form-group">
-    <form action="">
-    <h5>--> FOR adding New Brand</h5>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Brand name">
-    <input type="file" class="form-control-file" id="logo of brand"><br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Brand</button>
+    <form action="#" id="addBrandForm" enctype="multipart/form-data"> <!-- Note the enctype attribute for file uploads -->
+        <h5>--> FOR adding New Brand</h5>
+        <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Brand name">
+        <input type="file" class="form-control-file" id="logoOfBrand" name="logoOfBrand"><br>
+        <button type="submit" class="btn btn-primary">Add Brand</button>
     </form>
-  </div>
+</div>
+
+
   <div class="form-group">
     <form action="">
     <h5>--> FOR adding New Model</h5>
@@ -123,8 +126,8 @@
     <button type="button" class="btn btn-primary" data-dismiss="modal">Add Part</button>
     </form>
   </div>
-
 </div>
 </div>
 </div>
+<script src="addbrand.js"></script>
 </html>

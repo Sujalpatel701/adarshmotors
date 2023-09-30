@@ -146,7 +146,6 @@
     <button type="button" class="btn btn-primary" data-dismiss="modal">Update Part</button>
   </form>
 </div>
-
 </div>
 </div>
 </div>
