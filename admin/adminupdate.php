@@ -79,7 +79,9 @@
       <option>4</option>
       <option>5</option>
     </select>
-    <!-- Add fields for updating brand information here -->
+    <label for="">Change name:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Brand name">
+    <input type="file" class="form-control-file" id="logo of brand">
     <br>
     <button type="button" class="btn btn-primary" data-dismiss="modal">Update Brand</button>
   </form>
@@ -103,7 +105,9 @@
       <option>4</option>
       <option>5</option>
     </select>
-    <!-- Add fields for updating model information here -->
+    <label for="">Change name:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Model name">
+    <input type="file" class="form-control-file" id="logo of brand">
     <br>
     <button type="button" class="btn btn-primary" data-dismiss="modal">Update Model</button>
   </form>
@@ -135,7 +139,9 @@
       <option>4</option>
       <option>5</option>
     </select>
-    <!-- Add fields for updating part information here -->
+    <label for="">Change name:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Part name">
+    <input type="file" class="form-control-file" id="logo of brand">
     <br>
     <button type="button" class="btn btn-primary" data-dismiss="modal">Update Part</button>
   </form>
