@@ -71,45 +71,29 @@
     <div>
     
 <div class="form-group">
-    <form action="#" id="addBrandForm" enctype="multipart/form-data"> <!-- Note the enctype attribute for file uploads -->
+    <form  id="addBrandForm" enctype="multipart/form-data"> 
         <h5>--> FOR adding New Brand</h5>
         <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Brand name">
+        <span id="brandNameCheck"></span>
         <input type="file" class="form-control-file" id="logoOfBrand" name="logoOfBrand"><br>
         <button type="submit" class="btn btn-primary">Add Brand</button>
     </form>
 </div>
 
 
-  <div class="form-group">
-    <form action="">
-    <h5>--> FOR adding New Model</h5>
-    <label for="exampleFormControlSelect1">Select Brand</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-        <?php
-        $host = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "adarshmotors";
-            $conn = new mysqli($host, $username, $password, $dbname);
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-            $sql = "SELECT brand_name FROM brand";
-            $result = $conn->query($sql);
-            if ($result && mysqli_num_rows($result) > 0) {
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<option>" . $row['brand_name'] . "</option>";
-                }
-            }
-        ?>
-    </select>
-    <label for="">New Model</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Model name">
-    <input type="file" class="form-control-file" id="logo of brand">
-    <br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Add Model</button>
+<div class="form-group">
+    <form  id="addModelForm" enctype="multipart/form-data">
+        <h5>-->FOR adding New Model</h5>
+        <label for="addmodel">Enter Brand</label><br>
+        <input type="text" id="addmodel" class="form-control" placeholder="Brand name">
+        <span id="brandExistsMessage" class="bg-success text-light"></span>
+        <label for="modelName">Model Name</label>
+        <input type="text" class="form-control" id="modelName" placeholder="Model name">
+        <input type="file" class="form-control-file" id="modelImage"><br>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="addmodelform">Add Model</button>
     </form>
-  </div>
+</div>
+
   <div class="form-group">
     <form action="">
     <h5>--> FOR adding New Part</h5>
@@ -141,5 +125,7 @@
 </div>
 </div>
 </div>
+<script src="addmodel.js"></script>
 <script src="addbrand.js"></script>
+<script src="addbrandcheck.js"></script>
 </html>

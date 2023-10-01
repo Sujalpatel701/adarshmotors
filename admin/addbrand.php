@@ -1,6 +1,4 @@
 <?php
-
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 $host = "localhost";
@@ -17,14 +15,15 @@ $dbname = "adarshmotors";
     $brandName = $_POST["brandName"];
 
     $uploadDir = "brandimg/";
-
-
+    $sql="CREATE TABLE `$brandName` (
+        `model_name` varchar(255) NOT NULL,
+        `model_img`  varchar(255) NOT NULL
+      )";
+    $conn->query($sql);
     $logoFile = basename($_FILES["logoOfBrand"]["name"]);
     $logoFile1 = $uploadDir . basename($_FILES["logoOfBrand"]["name"]);
     if (move_uploaded_file($_FILES["logoOfBrand"]["tmp_name"], $logoFile1)) {
-     
         $sql = "INSERT INTO brand (brand_name, brand_img) VALUES ('$brandName', '$logoFile')";
-
         if ($conn->query($sql) === TRUE) {
             echo "Brand added successfully.";
         } else {
@@ -33,7 +32,7 @@ $dbname = "adarshmotors";
     } else {
         echo "Error uploading file.";
     }
-
     $conn->close();
 }
 ?>
+
