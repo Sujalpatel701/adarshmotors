@@ -73,6 +73,7 @@
 <div class="form-group">
     <form  id="addBrandForm" enctype="multipart/form-data"> 
         <h5>--> FOR adding New Brand</h5>
+        <label for="modelName">Brand Name</label>
         <input type="text" class="form-control" id="brandName" name="brandName" placeholder="Brand name">
         <span id="brandNameCheck"></span>
         <input type="file" class="form-control-file" id="logoOfBrand" name="logoOfBrand"><br>
@@ -84,11 +85,11 @@
 <div class="form-group">
     <form  id="addModelForm" enctype="multipart/form-data">
         <h5>-->FOR adding New Model</h5>
-        <label for="addmodel">Enter Brand</label><br>
-        <input type="text" id="addmodel" class="form-control" placeholder="Brand name">
-        <span id="brandExistsMessage" class="bg-success text-light"></span>
+        <input type="text" id="addmodelbrand" class="form-control" placeholder="Brand name">
+        <span id="addmodelbrandNameCheck"></span><br>
         <label for="modelName">Model Name</label>
-        <input type="text" class="form-control" id="modelName" placeholder="Model name">
+        <input type="text" class="form-control" id="addmodelbrand" placeholder="Model name">
+        <span id="addmodelmodelNameCheck"></span>
         <input type="file" class="form-control-file" id="modelImage"><br>
         <button type="button" class="btn btn-primary" data-dismiss="modal" id="addmodelform">Add Model</button>
     </form>
@@ -128,4 +129,5 @@
 <script src="addmodel.js"></script>
 <script src="addbrand.js"></script>
 <script src="addbrandcheck.js"></script>
+<script src="addmodelbrandcheck.js"></script>
 </html>

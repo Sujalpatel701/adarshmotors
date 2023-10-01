@@ -15,11 +15,6 @@ $dbname = "adarshmotors";
     $brandName = $_POST["brandName"];
 
     $uploadDir = "brandimg/";
-    $sql="CREATE TABLE `$brandName` (
-        `model_name` varchar(255) NOT NULL,
-        `model_img`  varchar(255) NOT NULL
-      )";
-    $conn->query($sql);
     $logoFile = basename($_FILES["logoOfBrand"]["name"]);
     $logoFile1 = $uploadDir . basename($_FILES["logoOfBrand"]["name"]);
     if (move_uploaded_file($_FILES["logoOfBrand"]["tmp_name"], $logoFile1)) {
