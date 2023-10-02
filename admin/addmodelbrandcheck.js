@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $("#addmodelbrand").keyup(function () {
         var brandName = $(this).val().trim();
@@ -6,7 +5,7 @@ $(document).ready(function () {
         if (brandName !== "") {
             $.ajax({
                 type: "POST",
-                url: "addmodelbrandcheck.php", // Replace with the path to your PHP script
+                url: "addmodelbrandcheck.php", 
                 data: { brandName: brandName },
                 success: function (response) {
                     if (response === "exists") {

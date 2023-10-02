@@ -71,14 +71,7 @@
         </li>';
         }
     ?>
-        
     </ul>
-
-     
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2 bg-dark" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
   </div>
 </nav>
 
@@ -127,6 +120,9 @@ margin-right:2%;" id="brandsaudi">
 <div class="tutorial" id="brands">
           <center>BRANDS</center> </div>
 </div>
+<?php
+session_start();
+if(isset($_SESSION['is_login'])){echo'
 <div class="row carsshow row-cols-1 row-cols-md-3">
   <div class="col mb-4" id="audi">
     <div class="card">
@@ -232,19 +228,24 @@ margin-right:2%;" id="brandsaudi">
       </div>
     </div>
   </div>
-  <div class="col mb-4" id="mercedes">
-    <div class="card">
-      <img src="image/Mercedes.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">MERCEDES</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
+  
+
+        <div class="col mb-4" id="mercedes">
+        <div class="card">
+          <img src="image/Mercedes.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
+          <div class="card-body">
+            <h5 class="card-title">MERCEDES</h5>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text d-inline">Choose Model To View Parts</p>  
+          <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
+          </div>
+        </div>
+      </div>';
+    }  
+?>
+  
 </div>
 </div> 
 
@@ -510,5 +511,6 @@ padding:0;">
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/all.min.js"></script>
+<script src="js/userlogin.js"></script>
 </body>
 </html>

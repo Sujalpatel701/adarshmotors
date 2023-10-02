@@ -1,6 +1,6 @@
-function adminlogin() {
-    var loginemail = $("#adminloginemail").val();
-    var loginpassword = $("#adminloginpassword").val();
+function userlogin() {
+    var loginemail = $("#loginemail").val();
+    var loginpassword = $("#loginpassword").val();
 
     loginemail = $.trim(loginemail);
     loginpassword = $.trim(loginpassword);
@@ -15,7 +15,7 @@ function adminlogin() {
         return false;
     } else {
         $.ajax({
-            url: "admin/admin.php",
+            url: "user/userlogin.php",
             method: "POST",
             dataType: "text",
             data: {
@@ -27,12 +27,12 @@ function adminlogin() {
                     $("#loginmess").html("<span class='alert alert-success'>Login sucessful</span>");
                     $("#spinlogin").html("<div class='spinner-border text-sucess'></div>");
                     setTimeout(function () {
-                    window.location.href = "admin/admindashboard.php";
+                    window.location.href = "index.php";
                 }, 2000);
                 } else if (data === "IncorrectPassword") {
                     $("#loginuserpass").html("<small class='alert alert-danger'>Incorrect password</small>");
                 } else if (data === "UserNotFound") {
-                    $("#loginuseremail").html("<small class='alert alert-danger'>Admin not found</small>");
+                    $("#loginuseremail").html("<small class='alert alert-danger'>User not found</small>");
                 } else {
                 }
             },

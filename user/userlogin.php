@@ -31,9 +31,7 @@ if(isset($_POST['loginemail']) && isset($_POST['loginpassword'])) {
     } else {
         echo "UserNotFound";
     }
-
     mysqli_close($conn);
 }
-
 }
 ?>
