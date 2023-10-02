@@ -430,7 +430,7 @@ padding:0;">
 
 
 
-<!-- login -->
+<!--admin login -->
 
 <div class="modal fade" id="exampleModaladminlogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
@@ -468,42 +468,45 @@ padding:0;">
 </div>
 
 
-<!--Admin login -->
+<!--login -->
 
 <div class="modal fade" id="exampleModallogin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">LogIn</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group"><i class="fa-solid fa-envelope"></i>
-            <label for="email"><strong>Email</strong></label><small id="loginuseremail"></small>
-            <input type="email" class="form-control" id="loginemail" placeholder="Email">
-          </div>
-          <div class="form-group"><i class="fas fa-lock"></i>
-            <label for="password"><strong>Password</strong></label><small id="loginuserpass"></small>
-            <input type="password" class="form-control" id="loginpassword" placeholder="Password">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-      <span id="loginmess"></span>
-      <div id="spinlogin"></div>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          <i class="fas fa-times"></i> Close
-        </button>
-        <button type="button" class="btn btn-primary" onclick="userlogin()">
-          <i class="fas fa-save"></i> Login
-        </button>
-      </div>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">LogIn</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="loginemail"><strong>Email</strong></label>
+                        <small id="loginuseremail" class="text-danger"></small>
+                        <input type="email" class="form-control" id="loginemail" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="loginpassword"><strong>Password</strong></label>
+                        <small id="loginuserpass" class="text-danger"></small>
+                        <input type="password" class="form-control" id="loginpassword" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <span id="loginmess" class="text-success"></span>
+                <div id="spinlogin"></div>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <i class="fas fa-times"></i> Close
+                </button>
+                <button type="button" class="btn btn-primary" id="loginButton">
+                    <i class="fas fa-save"></i> Login
+                </button>
+            </div>
+        </div>
     </div>
-  </div>
 </div>
+
 
 <script type="text/javascript" src="js/ajaxrequest.js"></script>
 <script type="text/javascript" src="js/adminrequest.js"></script>
