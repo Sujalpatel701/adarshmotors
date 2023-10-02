@@ -4,6 +4,7 @@ $(document).ready(function () {
         var loginpassword = $.trim($("#loginpassword").val());
 
         if (loginemail === '') {
+            window.alert("Enter Email");
             $("#loginuseremail").text("Enter Email");
             $("#loginuseremail").addClass("text-danger");
             $("#loginemail").focus();
@@ -11,6 +12,7 @@ $(document).ready(function () {
         }
 
         if (loginpassword === '') {
+            window.alert("Enter Password");
             $("#loginuserpass").text("Enter Password");
             $("#loginuserpass").addClass("text-danger");
             $("#loginpassword").focus();
@@ -38,11 +40,9 @@ $(document).ready(function () {
                     window.alert("Login successful");
                 } else if (data === "IncorrectPassword") {
                     $("#loginuserpass").text("Incorrect password").addClass("text-danger");
-                    window.location.href = "index.php";
                     window.alert("Incorrect password");
                 } else if (data === "UserNotFound") {
                     $("#loginuseremail").text("User not found").addClass("text-danger");
-                    window.location.href = "index.php";
                     window.alert("User not found");
                 }
                 $("#spinlogin").html("");
