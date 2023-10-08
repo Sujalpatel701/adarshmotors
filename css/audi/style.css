@@ -19,4 +19,15 @@ nav{
         flex: 0 0 50%; 
         max-width: 50%;
     }
+    .card-title {
+        font-size: 24px;
+    }
+    
+    .btn {
+        font-size: 14px; 
+    }
+    #modelimg{
+        width: 20px; 
+        height: 15px;
+    }
 }

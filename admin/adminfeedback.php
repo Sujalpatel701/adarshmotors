@@ -24,7 +24,7 @@
     </nav>
 </body>
 <div class="container-fluid mb-5" style="margin-top: 110px;padding-left:30px">
-<div class="row" style="">
+<div class="row" >
 <nav class="col-sm-3 col-md-2 sidebar py-5 d-print-none" style="background-color: #0e1f0b; border-radius: 30px; margin-right: 30px;">
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">

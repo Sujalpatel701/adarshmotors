@@ -1,13 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     // Replace with your database connection details
-    $host = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "adarshmotors";
-
-    // Create a connection to the database
-    $conn = new mysqli($host, $username, $password, $dbname);
+    include("dbconnect.php");
 
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);

@@ -8,13 +8,20 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/audi/style.css">
-    <title>AUDI</title>
+    <title>MODELS</title>
 </head>
-<body>
+<body style="background-color: #0e1f0b;">
 
 <nav class="navbar navbar-dark bg-dark" style="font-size: 40px;">
     <div style="display: flex; align-items: center; justify-content: flex-end;">
-        <img src="image/audi.png" style="height: 75px;" alt="" loading="lazy">
+    <?php
+    if (isset($_GET['brandName'])) {
+        $brandName = $_GET['brandName'];
+        include('dbconnection.php');
+        $sql = "SELECT brand_img FROM brand WHERE brand_name = '$brandName'";
+        echo "<img src='admin/brandimg/" . $brandName . ".png' style='height: 75px;background-color:white;border-radius: 25px;' alt='' loading='lazy'>";
+    }
+    ?>
         <div style="display: flex; align-items: center; margin-left: 10px;">
             <div style="width: 2px; background-color: white; height: 75px; margin-right: 10px;"></div>
             ADARSH MOTORS
@@ -29,55 +36,51 @@
 
 
 
-
-<div class="row row-cols-1 row-cols-md-4 g-4" style="background-color:#0e1f0b; margin: 0;padding-top: 40px;padding-bottom: 40px;">
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/audi.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/audi.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a short card.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/audi.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card h-100">
-      <img src="image/audi.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
-  <div class="col" style="padding-top: 40px;">
-    <div class="card h-100">
-      <img src="image/audi.png" class="card-img-top" alt="..." >
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-      </div>
-    </div>
-  </div>
+<div style="margin-left: 2%; background-color: #0e1f0b;
+margin-right:2%; " id="brandsaudi">
+<div class="tutorial1" id="tutorial" style="background-color: #0e1f0b;
+    text-align: center;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 10px;
+    margin-right: -1%;
+    margin-left:-1%">
+<div class="tutorial" id="brands">
+          <center>MODELS</center> </div>
 </div>
-
+<div class="row carsshow row-cols-1 row-cols-md-4">
+  <?php
+   if (isset($_GET['brandName'])) {
+    $brandName = $_GET['brandName'];
+    include('dbconnection.php');
+    $sql = "SELECT model_name,model_img FROM model WHERE brand = '$brandName'";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+      while($row = $result->fetch_assoc()){
+        echo '<div class="col mb-4" id="audi">
+        <div class="card">
+          <img id="modelimg" src="admin/modelimg/' . $row['model_img'] . '" class="card-img-top custom-image" style="width: 350px; height: 250px; object-fit:contain; " alt="...">
+          <div class="card-body">
+            <h5 class="card-title" style="font-weight: bold; font-size: 40px; text-transform: uppercase;">' . $row['model_name'] . '</h5>
+            <p class="card-text"></p>
+          </div>
+          <div class="card-footer">
+            <p class="card-text d-inline">Choose Model To View Parts</p>  
+          <a class="btn btn-danger text-white font-width-bolder float-right" href="audi.php">view Models</a>
+          </div>
+        </div>
+      </div>';
+      }
+    }
+    else{
+      echo '<h1 style="color: white;">No Model Found</h1>';
+    }
+}
+?>
+</div>
+</div> 
 
 
 <div class="hrs" style="background-color: gray;
@@ -90,7 +93,7 @@ padding:0;">
     padding:0;
     margin-left:-1%;">
 </div>
-</div>
+
 <div class="container-fluid txt-banner" style="background-color: #0e1f0b;color: white;">
   <div class="row bottom-banner">
     <div class="col-sm">
@@ -103,7 +106,7 @@ padding:0;">
     <h5><i class="fa-solid fa-user mr-3"></i>Bharat Patel</h5>
   </div>
   <div class="col-sm">
-    <h5><i class="fa-solid fa-phone mr-3"></i>9898614361</h5>
+    <h5><i class="fa-solid fa-phone mr-3"></i>9824729040</h5>
   </div>
 </div>
 </div>
@@ -117,16 +120,11 @@ padding:0;">
     padding:0;
     margin-left:-1%;">
 </div>
-</div>
-
-
-
 <footer class="bg-dark text-center text-white">
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
   ADARSH MOTORS Since 2008
   </div>
 </footer>
-
 <script src="js/jquery.min.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>

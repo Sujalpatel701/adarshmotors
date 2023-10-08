@@ -120,136 +120,45 @@ margin-right:2%;" id="brandsaudi">
 <div class="tutorial" id="brands">
           <center>BRANDS</center> </div>
 </div>
-<?php
-session_start();
-if(isset($_SESSION['is_login'])){echo'
 <div class="row carsshow row-cols-1 row-cols-md-3">
-  <div class="col mb-4" id="audi">
-    <div class="card">
-      <img src="image/audi.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">AUDI</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="audi.php">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="skoda">
-    <div class="card" >
-      <img src="image/skoda.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">SKODA</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="vw">
-    <div class="card">
-      <img src="image/vw.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">VW</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="hyundi">
-    <div class="card">
-      <img src="image/hyundai.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">HYUNDI</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="suzuki">
-    <div class="card">
-      <img src="image/suzuki.png" class="card-img-top custom-image" style="width:450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">SUZUKI</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="tata">
-    <div class="card">
-      <img src="image/tata.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">TATA</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="mahindra">
-    <div class="card">
-      <img src="image/mahindra.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">MAHINDRA</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  <div class="col mb-4" id="bmw">
-    <div class="card">
-      <img src="image/bmw.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-      <div class="card-body">
-        <h5 class="card-title">BMW</h5>
-        <p class="card-text"></p>
-      </div>
-      <div class="card-footer">
-        <p class="card-text d-inline">Choose Model To View Parts</p>  
-      <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-      </div>
-    </div>
-  </div>
-  
+<?php
 
-        <div class="col mb-4" id="mercedes">
-        <div class="card">
-          <img src="image/Mercedes.png" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit:contain; " alt="...">
-          <div class="card-body">
-            <h5 class="card-title">MERCEDES</h5>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer">
-            <p class="card-text d-inline">Choose Model To View Parts</p>  
-          <a class="btn btn-danger text-white font-width-bolder float-right" href="">view Models</a>
-          </div>
-        </div>
-      </div>';
+if(isset($_SESSION['is_login'])){
+  include('dbconnection.php');
+  if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT  brand_name, brand_img FROM brand";
+$result = $conn->query($sql);
+
+if ($result->num_rows > 0) {
+  while ($row = $result->fetch_assoc()) {
+      $brandName = $row["brand_name"];
+      $imageSrc = $row["brand_img"];
+      
+      echo '<div class="col mb-4 brand-card">';
+      echo '<div class="card">';
+      echo '<img src="admin/brandimg/' . $imageSrc . '" class="card-img-top custom-image" style="width: 450px; height: 350px; object-fit: contain;" alt="...">';
+      echo '<div class="card-body">';
+      echo '<h5 class="card-title" style="font-weight: bold; font-size: 40px; text-transform: uppercase;">' . $brandName . '</h5>'; 
+      echo '<p class="card-text"></p>';
+      echo '</div>'; 
+      echo '<div class="card-footer">';
+      echo '<p class="card-text d-inline">Choose Model To View Parts</p>';
+      echo '<a class="btn btn-danger text-white font-width-bolder float-right view-model-link" href="model.php?brandName=' . $brandName . '">View Models</a>';
+      echo '</div>';
+      echo '</div>';
+      echo '</div>';
+  }
+} else{
+  echo '<h1 style="color: white;">No Brand Found</h1>';
+}
+$conn->close();
     }  
 ?>
-  
+
 </div>
 </div> 
-
-
 
 <div class="hrs" style="background-color: gray;
 width:100%;
@@ -293,7 +202,7 @@ padding:0;">
     <h5><i class="fa-solid fa-user mr-3"></i>Bharat Patel</h5>
   </div>
   <div class="col-sm">
-    <h5><i class="fa-solid fa-phone mr-3"></i>9898614361</h5>
+    <h5><i class="fa-solid fa-phone mr-3"></i>9824729040</h5>
   </div>
 </div>
 </div>
@@ -508,9 +417,10 @@ padding:0;">
 </div>
 
 
+<script src="model.js"></script>
 <script type="text/javascript" src="js/ajaxrequest.js"></script>
 <script type="text/javascript" src="js/adminrequest.js"></script>
-<script src="js/jquery.min.js"></script>
+<script src="admin/jquery.js"></script>
 <script src="js/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/all.min.js"></script>

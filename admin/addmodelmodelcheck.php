@@ -1,11 +1,5 @@
 <?php
-$host = "localhost";
-$username = "root";
-$password = "";
-$dbname = "adarshmotors";
-
-
-$conn = new mysqli($host, $username, $password, $dbname);
+include("dbconnect.php");
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
