@@ -8,24 +8,35 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/audi/style.css">
-    <title>MODELS</title>
+    <title>PARTS</title>
 </head>
 <body style="background-color: #0e1f0b;">
 
 <nav class="navbar navbar-dark bg-dark" style="font-size: 40px;">
-    <div style="display: flex; align-items: center; justify-content: flex-end;">
+<div style="display: flex; align-items: center; justify-content: flex-end;">
     <?php
-    if (isset($_GET['brandName'])) {
+    if (isset($_GET['brandName']) && isset($_GET['modelName'])) {
         $brandName = $_GET['brandName'];
+        $modelName = $_GET['modelName'];
         include('dbconnection.php');
         $sql = "SELECT brand_img FROM brand WHERE brand_name = '$brandName'";
         $result = $conn->query($sql);
         $row = $result->fetch_assoc();
         $brandimage = $row['brand_img'];
         echo "<img src='admin/brandimg/".$brandimage."' style='height: 75px;background-color:white;border-radius: 25px;' alt='' loading='lazy'>";
+        
+        $sql = "SELECT model_name FROM model WHERE model_name = '$modelName'";
+        $result = $conn->query($sql);
+        $row = $result->fetch_assoc();
+        $modelimage = $row['model_name'];
+
+        echo'<div style="display: flex; align-items: center; margin-left: 10px; font-size: 50px;text-transform: uppercase;font-weight: bold;">
+        <div style="width: 2px; background-color: white; height: 75px; margin-right: 10px;"></div>
+        '.$modelimage.'
+    </div>';
     }
     ?>
-        <div style="display: flex; align-items: center; margin-left: 10px;">
+     <div style="display: flex; align-items: center; margin-left: 10px;">
             <div style="width: 2px; background-color: white; height: 75px; margin-right: 10px;"></div>
             ADARSH MOTORS
         </div>
@@ -33,7 +44,7 @@
     <div>
     <a href="#"  class="home" style="font-family: 'Times New Roman', Times, serif;color: white; text-decoration: none;margin: 10px;;padding:0">Home</a>
     <a href="#" class="user" style="color: white; text-decoration: none; margin:0;padding:0;font-family: 'Times New Roman', Times, serif;" >User</a>
-    </div>
+    </div>    
 </nav>
 
 
@@ -51,36 +62,34 @@ margin-right:2%; " id="brandsaudi">
     margin-right: -1%;
     margin-left:-1%">
 <div class="tutorial" id="brands">
-          <center>MODELS</center> </div>
+          <center>PARTS</center> </div>
 </div>
-<div class="row carsshow row-cols-1 row-cols-md-4">
-  <?php
-   if (isset($_GET['brandName'])) {
+<div class="row carsshow row-cols-1 row-cols-md-5">
+<?php
+if (isset($_GET['brandName']) && isset($_GET['modelName'])) {
     $brandName = $_GET['brandName'];
+    $modelName = $_GET['modelName'];
     include('dbconnection.php');
-    $sql = "SELECT model_name,model_img FROM model WHERE brand = '$brandName'";
+    $sql = "SELECT part_name,part_img,part_price,part_desc FROM part WHERE brand = '$brandName' AND model = '$modelName'";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
       while($row = $result->fetch_assoc()){
         echo '<div class="col mb-4" id="audi">
         <div class="card">
-          <img id="modelimg" src="admin/modelimg/' . $row['model_img'] . '" class="card-img-top custom-image" style="width: 350px; height: 250px; object-fit:contain; " alt="...">
-          <div class="card-body">
-            <h5 class="card-title" style="font-weight: bold; font-size: 40px; text-transform: uppercase;">' . $row['model_name'] . '</h5>
-            <p class="card-text"></p>
-          </div>
-          <div class="card-footer">
-            <p class="card-text d-inline">Choose Model To View Parts</p>  
-            <a class="btn btn-danger text-white font-width-bolder float-right view-model-link" href="part.php?brandName=' . $brandName . '&modelName=' . $row['model_name'] . '">View Models</a>
-          </div>
+        <img src="admin/partimg/'.$row['part_img'].'" class="card-img-top" alt="..." style="height: 200px;widht:150px">
+        <div class="card-body">
+          <h5 class="card-title">'.$row['part_name'].'</h5>
+          <p class="card-text">'.$row['part_desc'].'</p>
+          <a href="#" class="btn btn-primary">'.$row['part_price'].'</a>
         </div>
+      </div>
       </div>';
       }
     }
     else{
-      echo '<h1 style="color: white;">No Model Found</h1>';
+      echo '<h1 class="card-title" style="color: white;">No Part Available</h1>';
     }
-}
+  }
 ?>
 </div>
 </div> 

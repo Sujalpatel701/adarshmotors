@@ -96,23 +96,32 @@
 </div>
 
 <div class="form-group">
-    <form id="addPartForm" enctype="multipart/form-data">
-        <h5>--> FOR adding New Part</h5>
-        <label for="addpartBrand">Brand Name</label>
-        <input type="text" id="addpartBrand" class="form-control" placeholder="Brand name">
-        <span id="addpartBrandNameCheck"></span><br>
-        <label for="addpartModel">Model Name</label>
-        <input type="text" id="addpartModel" class="form-control" placeholder="Model name">
-        <span id="addpartModelNameCheck"></span><br>
-        <label for="addpartName">Part Name</label>
-        <input type="text" class="form-control" id="addpartName" placeholder="Part name">
-        <span id="addpartNameCheck"></span><br>
-        <label for="addpartPrice">Part Price</label>
-        <input type="text" class="form-control" id="addpartPrice" placeholder="Part Price">
-        <span id="addpartPriceCheck"></span><br>
-        <input type="file" class="form-control-file" id="partImage"><br>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" id="addpartform">Add Part</button>
-    </form>
+<form id="addPartForm" enctype="multipart/form-data">
+    <h5>--> FOR adding New Part</h5>
+    <label for="addpartBrand">Brand Name</label>
+    <input type="text" id="addpartBrand" class="form-control" placeholder="Brand name">
+    <span id="addpartBrandNameCheck"></span><br>
+
+    <label for="addpartModel">Model Name</label>
+    <input type="text" id="addpartModel" class="form-control" placeholder="Model name">
+    <span id="addpartModelNameCheck"></span><br>
+
+    <label for="addpartName">Part Name</label>
+    <input type="text" class="form-control" id="addpartName" placeholder="Part name">
+    <span id="addpartNameCheck"></span><br>
+
+    <label for="addpartDesc">Part Description</label>
+    <input type="text" class="form-control" id="addpartDesc" placeholder="Part Description">
+    <span id="addpartDescCheck"></span><br>
+
+    <label for="addpartPrice">Part Price</label>
+    <input type="text" class="form-control" id="addpartPrice" placeholder="Part Price">
+    <span id="addpartPriceCheck"></span><br>
+
+    <input type="file" class="form-control-file" id="partImage"><br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" id="addpartform">Add Part</button>
+</form>
+
 </div>
 
 

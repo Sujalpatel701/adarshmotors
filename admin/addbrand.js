@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $("#addBrandForm").submit(function (e) {
-        e.preventDefault(); // Prevent the form from submitting traditionally
+        e.preventDefault(); 
 
         var brandName = $("#brandName").val();
         var logoFile = $("#logoOfBrand")[0].files[0];
@@ -10,20 +10,20 @@ $(document).ready(function () {
             return;
         }
 
-        // Create a FormData object to send files
+       
         var formData = new FormData();
         formData.append("brandName", brandName);
         formData.append("logoOfBrand", logoFile);
 
-        // Send an Ajax POST request to your server-side script
+   
         $.ajax({
             type: "POST",
-            url: "addbrand.php", // Replace with the URL of your server-side script
+            url: "addbrand.php",
             data: formData,
-            contentType: false, // Important for sending files
-            processData: false, // Important for sending files
+            contentType: false, 
+            processData: false, 
             success: function (response) {
-                alert(response); // Display success or error message from the server
+                alert(response); 
             },
             error: function (xhr, status, error) {
                 console.error("Ajax request failed: " + error);

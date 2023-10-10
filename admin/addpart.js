@@ -1,34 +1,32 @@
-$(document).ready(function () {
-    $("#addpartform").click(function () {
-        // Get form data
-        var brandName = $("#addpartBrand").val();
-        var modelName = $("#addpartModel").val();
-        var partName = $("#addpartName").val();
-        var partPrice = $("#addpartPrice").val();
-        var partImage = $("#partImage")[0].files[0];
+$(document).ready(function() {
+    $('#addpartform').click(function() {
 
-        // Perform client-side validation here if needed
+        var brand = $('#addpartBrand').val();
+        var model = $('#addpartModel').val();
+        var partName = $('#addpartName').val();
+        var partDesc = $('#addpartDesc').val();
+        var partPrice = $('#addpartPrice').val();
+        var partImage = $('#partImage')[0].files[0];
 
-        // Create FormData object for file upload
+       
         var formData = new FormData();
-        formData.append("brandName", brandName);
-        formData.append("modelName", modelName);
-        formData.append("partName", partName);
-        formData.append("partPrice", partPrice);
-        formData.append("partImage", partImage);
+        formData.append('brand', brand);
+        formData.append('model', model);
+        formData.append('partName', partName);
+        formData.append('partDesc', partDesc);
+        formData.append('partPrice', partPrice);
+        formData.append('partImage', partImage);
 
-        // Send an Ajax POST request to the server-side PHP script
+   
         $.ajax({
-            type: "POST",
-            url: "addpart.php", // Replace with the URL of your server-side script
+            url: 'addpart.php', 
+            type: 'POST',
             data: formData,
-            contentType: false, // Important for sending files
-            processData: false, // Important for sending files
-            success: function (response) {
-                alert(response); // Handle the response from the server
-            },
-            error: function (xhr, status, error) {
-                alert("Failed to add part. Please try again.");
+            processData: false,
+            contentType: false,
+            success: function(response) {
+                alert(response);
+                console.log(response);
             }
         });
     });
