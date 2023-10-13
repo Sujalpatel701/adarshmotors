@@ -96,6 +96,8 @@
     </form>
 </div>
 
+
+
 <div class="form-group">
 <form id="addPartForm" enctype="multipart/form-data">
     <h5>--> FOR adding New Part</h5>
