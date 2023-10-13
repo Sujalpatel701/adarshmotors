@@ -82,9 +82,11 @@
 </div>
 
 
+
 <div class="form-group">
     <form  id="addModelForm" enctype="multipart/form-data">
         <h5>-->FOR adding New Model</h5>
+        <label for="addmodelbrand">Brand Name</label>
         <input type="text" id="addmodelbrand" class="form-control" placeholder="Brand name">
         <span id="addmodelbrandNameCheck"></span><br>
         <label for="modelName">Model Name</label>
@@ -129,6 +131,7 @@
 </div>
 </div>
 </div>
+<script src="jquery.js"></script>
 <script src="addmodel.js"></script>
 <script src="addbrand.js"></script>
 <script src="addpart.js"></script>

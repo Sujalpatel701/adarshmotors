@@ -69,75 +69,66 @@
         </nav>
     <div>
     
-    <div class="form-group">
-    <form action="">
-    <h5>--> FOR Deleting Brand</h5>
-    <label for="exampleFormControlSelect1">Select Brand</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Brand</button>
+<div class="form-group">
+    <form id="deleteBrandForm">
+        <h5>--> FOR deleting Brand</h5>
+        <label for="brandToDelete">Brand Name</label>
+        <input type="text" class="form-control" id="brandToDelete" name="brandToDelete" placeholder="Enter Brand name">
+        <span id="brandToDeleteCheck"></span><br>
+        <button type="submit" class="btn btn-danger">Delete Brand</button>
     </form>
-  </div>
-  <div class="form-group">
-    <form action="">
-    <h5>--> FOR Deleting Model</h5>
-    <label for="exampleFormControlSelect1">Select Brand</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="">Select Model</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select><br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Model</button>
+</div>
+
+
+
+
+
+<div class="form-group">
+    <form  id="addModelForm" enctype="multipart/form-data">
+        <h5>-->FOR adding New Model</h5>
+        <input type="text" id="addmodelbrand" class="form-control" placeholder="Brand name">
+        <span id="addmodelbrandNameCheck"></span><br>
+        <label for="modelName">Model Name</label>
+        <input type="text" class="form-control" id="addmodelmodelName" placeholder="Model name">
+        <span id="addmodelmodelNameCheck"></span><br>
+        <input type="file" class="form-control-file" id="modelImage"><br>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="addmodelform">Add Model</button>
     </form>
-  </div>
-  <div class="form-group">
-    <form action="">
-    <h5>--> FOR Deleting Part</h5>
-    <label for="exampleFormControlSelect2">Select Brand</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="exampleFormControlSelect2">Select Model</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="">Select Part</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Delete Part</button>
-    </form>
-  </div>
+</div>
+
+<div class="form-group">
+<form id="addPartForm" enctype="multipart/form-data">
+    <h5>--> FOR adding New Part</h5>
+    <label for="addpartBrand">Brand Name</label>
+    <input type="text" id="addpartBrand" class="form-control" placeholder="Brand name">
+    <span id="addpartBrandNameCheck"></span><br>
+
+    <label for="addpartModel">Model Name</label>
+    <input type="text" id="addpartModel" class="form-control" placeholder="Model name">
+    <span id="addpartModelNameCheck"></span><br>
+
+    <label for="addpartName">Part Name</label>
+    <input type="text" class="form-control" id="addpartName" placeholder="Part name">
+    <span id="addpartNameCheck"></span><br>
+
+    <label for="addpartDesc">Part Description</label>
+    <input type="text" class="form-control" id="addpartDesc" placeholder="Part Description">
+    <span id="addpartDescCheck"></span><br>
+
+    <label for="addpartPrice">Part Price</label>
+    <input type="text" class="form-control" id="addpartPrice" placeholder="Part Price">
+    <span id="addpartPriceCheck"></span><br>
+
+    <input type="file" class="form-control-file" id="partImage"><br>
+    <button type="button" class="btn btn-primary" data-dismiss="modal" id="addpartform">Add Part</button>
+</form>
+
+</div>
 
 </div>
 </div>
 </div>
+<script src="jquery.js"></script>
+<script src="deletebrand.js"></script>
+<script src="deletebrandbrandcheck.js"></script>
 </html>

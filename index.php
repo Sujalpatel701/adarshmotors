@@ -228,7 +228,7 @@ padding:0;">
       28 Ram Kutir Shopping Centre 
       Nr. Tapi Restaurant 
       Gangeshwar MahaDev Road 
-      Adajan, Surat, Gujarat
+      Adajan, Surat, Gujarat,
       India-395009
     </p>
     <div class="image-container" style="margin-top: 20px;">
