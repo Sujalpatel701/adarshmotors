@@ -84,17 +84,18 @@
 
 
 <div class="form-group">
-    <form  id="addModelForm" enctype="multipart/form-data">
-        <h5>-->FOR adding New Model</h5>
-        <input type="text" id="addmodelbrand" class="form-control" placeholder="Brand name">
-        <span id="addmodelbrandNameCheck"></span><br>
-        <label for="modelName">Model Name</label>
-        <input type="text" class="form-control" id="addmodelmodelName" placeholder="Model name">
-        <span id="addmodelmodelNameCheck"></span><br>
-        <input type="file" class="form-control-file" id="modelImage"><br>
-        <button type="button" class="btn btn-primary" data-dismiss="modal" id="addmodelform">Add Model</button>
+    <form id="deleteModelForm">
+        <h5>--> FOR deleting Model</h5>
+        <label for="deletemodelbrand">Brand Name</label>
+        <input type="text" class="form-control" id="deletemodelbrand" name="brandToDelete" placeholder="Enter Brand name">
+        <span id="deletemodelbrandCheck"></span><br>
+        <label for="deletemodelmodel">Model Name</label>
+        <input type="text" class="form-control" id="deletemodelmodel" name="modelToDelete" placeholder="Enter Model name">
+        <span id="deletemodelmodelCheck"></span><br>
+        <button type="submit" class="btn btn-danger">Delete Model</button>
     </form>
 </div>
+
 
 
 
@@ -124,13 +125,14 @@
     <input type="file" class="form-control-file" id="partImage"><br>
     <button type="button" class="btn btn-primary" data-dismiss="modal" id="addpartform">Add Part</button>
 </form>
-
 </div>
-
 </div>
 </div>
 </div>
 <script src="jquery.js"></script>
 <script src="deletebrand.js"></script>
+<script src="deletemodel.js"></script>
+<script src="deletemodelmodelcheck.js"></script>
+<script src="deletemodelbrandcheck.js"></script>
 <script src="deletebrandbrandcheck.js"></script>
 </html>
