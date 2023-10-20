@@ -100,31 +100,19 @@
 
 
 <div class="form-group">
-<form id="addPartForm" enctype="multipart/form-data">
-    <h5>--> FOR adding New Part</h5>
-    <label for="addpartBrand">Brand Name</label>
-    <input type="text" id="addpartBrand" class="form-control" placeholder="Brand name">
-    <span id="addpartBrandNameCheck"></span><br>
-
-    <label for="addpartModel">Model Name</label>
-    <input type="text" id="addpartModel" class="form-control" placeholder="Model name">
-    <span id="addpartModelNameCheck"></span><br>
-
-    <label for="addpartName">Part Name</label>
-    <input type="text" class="form-control" id="addpartName" placeholder="Part name">
-    <span id="addpartNameCheck"></span><br>
-
-    <label for="addpartDesc">Part Description</label>
-    <input type="text" class="form-control" id="addpartDesc" placeholder="Part Description">
-    <span id="addpartDescCheck"></span><br>
-
-    <label for="addpartPrice">Part Price</label>
-    <input type="text" class="form-control" id="addpartPrice" placeholder="Part Price">
-    <span id="addpartPriceCheck"></span><br>
-
-    <input type="file" class="form-control-file" id="partImage"><br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal" id="addpartform">Add Part</button>
-</form>
+     <form id="deletepartform">
+        <h5>--> FOR deleting Part</h5>
+        <label for="deletepartbrand">Brand Name</label>
+        <input type="text" class="form-control" id="deletepartbrand" name="brandToDelete" placeholder="Enter Brand name">
+        <span id="deletepartbrandCheck"></span><br>
+        <label for="deletepartmodel">Model Name</label>
+        <input type="text" class="form-control" id="deletepartmodel" name="modelToDelete" placeholder="Enter Model name">
+        <span id="deletepartmodelCheck"></span><br>
+        <label for="deletepartpart">Part Name</label>
+        <input type="text" class="form-control" id="deletepartpart" name="partToDelete" placeholder="Enter Part name">
+        <span id="deletepartpartCheck"></span><br>
+        <button type="submit" class="btn btn-danger">Delete Part</button>
+     </form>
 </div>
 </div>
 </div>
@@ -132,7 +120,11 @@
 <script src="jquery.js"></script>
 <script src="deletebrand.js"></script>
 <script src="deletemodel.js"></script>
+<script src="deletepart.js"></script>
 <script src="deletemodelmodelcheck.js"></script>
 <script src="deletemodelbrandcheck.js"></script>
 <script src="deletebrandbrandcheck.js"></script>
+<script src="deletepartbrandcheck.js"></script>
+<script src="deletepartmodelcheck.js"></script>
+<script src="deletepartpartcheck.js"></script>
 </html>

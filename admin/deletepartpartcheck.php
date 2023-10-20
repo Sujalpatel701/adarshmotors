@@ -5,9 +5,10 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     
     $brandName = $_POST["brandName"];
     $modelName = $_POST["modelName"];
+    $partName=$_POST["partName"];
    
-    $stmt = $conn->prepare("SELECT * FROM model WHERE model_name = ? AND brand = ?");
-    $stmt->bind_param("ss", $modelName, $brandName);
+    $stmt = $conn->prepare("SELECT * FROM part WHERE model = ? AND brand = ? AND part_name=?");
+    $stmt->bind_param("sss", $modelName, $brandName,$partName);
     $stmt->execute();
     $stmt->store_result();
 
