@@ -31,37 +31,37 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="admindashboard.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-tachometer-alt"></i>
+                           
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminuser.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fab fa-accessible-icon"></i>
+                            
                             Users
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminadd.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-users"></i>
+                         
                             add
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                     <a class="nav-link" href="adminupdate.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-users"></i>
+                      
                         update
                     </a>
                 </li>
                 <li class="nav-item mb-3">
                     <a class="nav-link" href="admindelete.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-users"></i>
+                       
                         delete
                     </a>
                 </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminfeedback.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-align-center"></i>
+                     
                             Feedback
                         </a>
                     </li>

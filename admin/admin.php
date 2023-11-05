@@ -21,10 +21,6 @@ if(isset($_POST['loginemail']) && isset($_POST['loginpassword'])) {
     if ($row = mysqli_fetch_assoc($result)) {
         if (password_verify($loginpassword, $row['admin_pass'])) {
             echo "LoginSuccessful";
-            $_SESSION['useremail'] = $loginemail;
-            $_SESSION['username'] = $row['admin_name'];
-            $_SESSION['user_id'] = $row['admin_id'];
-            $_SESSION['is_login'] = true;
         } else {
             echo "IncorrectPassword";
         }

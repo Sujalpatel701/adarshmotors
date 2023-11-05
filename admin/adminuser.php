@@ -30,37 +30,36 @@
                 <ul class="nav flex-column">
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="admindashboard.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-tachometer-alt"></i>
+                           
                             Dashboard
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminuser.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fab fa-accessible-icon"></i>
+                            
                             Users
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminadd.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-users"></i>
-                            add
+                           add
                         </a>
                     </li>
                     <li class="nav-item mb-3">
                     <a class="nav-link" href="adminupdate.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-users"></i>
+                       
                         update
                     </a>
                 </li>
                 <li class="nav-item mb-3">
                     <a class="nav-link" href="admindelete.php" style="color:aliceblue;font-size:30px">
-                        <i class="fas fa-users"></i>
+                       
                         delete
                     </a>
                 </li>
                     <li class="nav-item mb-3">
                         <a class="nav-link" href="adminfeedback.php" style="color: aliceblue; font-size: 30px;">
-                            <i class="fas fa-align-center"></i>
+                         
                             Feedback
                         </a>
                     </li>
@@ -83,42 +82,6 @@
       <td>Mark</td>
       <td>Otto</td>
       <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
     </tr>
   </tbody>
 </table>

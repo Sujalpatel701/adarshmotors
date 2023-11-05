@@ -59,7 +59,7 @@
         <a class="nav-link " href="logout.php">LOGOUT</a>
       </li>
       <li class="nav-item custom-nav-item">
-        <a class="nav-link " href="#">MY PROFILE</a>';
+        <a class="nav-link " href="user.php">MY PROFILE</a>';
       }
       
         else{
@@ -177,12 +177,15 @@ padding:0;">
   <h2 class="text-center mb-4">FeedBack & Contact Us</h2>
   <div class="row">
     <div class="col-md-8" id="form1">
-      <form action="" method="post">
-        <input type="text" class="form-control" name="name" placeholder="Name" style="background-color: #0e1f0b;"><br>
-        <input type="text" class="form-control" name="subject" placeholder="Subject" style="background-color: #0e1f0b;"><br>
-        <input type="email" class="form-control" name="email" placeholder="E-mail" style="background-color: #0e1f0b;"><br>
-        <textarea class="form-control" name="message" placeholder="How can we help you?" style="height:150px;background-color: #0e1f0b;"></textarea><br>
-        <input class="btn btn-danger" type="submit" value="Send" name="submit">
+      <form id="feebackform">
+        <input type="text" class="form-control" id="feedbackname" name="name" placeholder="Name" style="background-color: #0e1f0b;"><br>
+        <input type="text" class="form-control" id="feedbacksub" name="subject" placeholder="Subject" style="background-color: #0e1f0b;"><br>
+        <input type="email" class="form-control" id="feedbackmail" name="email" placeholder="E-mail" style="background-color: #0e1f0b;"><br>
+        <textarea class="form-control" name="message" id="feedbackfeed" placeholder="Your Feedback" style="height:150px;background-color: #0e1f0b;"></textarea><br>
+        <div class="text-center">
+          <span id="feedbackspan"></span>
+         <input class="btn btn-danger" value="Send"  onclick="submitForm()" style="border-radius: 10px; display: inline-block; padding: 10px;">
+      </div>
       </form>
     </div>
     </div>
@@ -425,5 +428,6 @@ padding:0;">
 <script src="js/bootstrap.min.js"></script>
 <script src="js/all.min.js"></script>
 <script src="js/userlogin.js"></script>
+<script src="feedback.js"></script>
 </body>
 </html>
