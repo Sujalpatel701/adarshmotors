@@ -78,27 +78,32 @@
             color: #555;
         }
 </style>
-<div class="profile" >
+<div class="profile">
+<form enctype="multipart/form-data" action="useruploadimg.php" method="post">
+    <h5>-->Add Image</h5>
+    <input type="file" name="imageUpload" id="imageUpload">
+    <br>
+    <br>    
+    <button type="submit" class="btn btn-primary">Add Image</button>
+</form>
+    <br>
+    <form action="addaddress.php" method="post">
+    <h5>-->Add Address</h5>
+    <input type="text" name="address" id="address" placeholder="Add Address" required>
+    <br><br>
+    <button type="submit" class="btn btn-primary">Add Address</button>
+</form>
 
-<img src="admin/modelimg/audi.png" alt="Not found">
-<h1>ADARSH MOTORS</h1>
-<p>ADARSH MOTORS is a car dealership company that sells new and used cars. It is located in the heart of the city, Kathmandu. It is one of the most popular car dealership companies in Nepal. It has been providing its services since 2010. It has been providing its services to the people of Nepal for more than 10 years. It has been providing its services to the people of Nepal for more than 10 years. It has been providing its services to the people of Nepal for more than 10 years.</p>
-</div>
-</div>
-</div>
-<?php
-session_start(); 
-if (isset($_SESSION['useremail'])) {
-    echo "User Email: " . $_SESSION['useremail'];
-} else {
-    echo "User email not set in the session.";
-}
-echo "<br>";
-if (isset($_SESSION['username'])) {
-    echo "Username: " . $_SESSION['username'];
-} else {
-    echo "Username not set in the session.";
-}
-?>
+    <br>
+    <form action="addoccu.php" method="post">
+    <h5>-->Add Occupation</h5>
+    <input type="text" name="occupation" id="occupation" placeholder="Add Occupation" required>
+    <br><br>
+    <button type="submit" class="btn btn-primary">Add Occupation</button>
+</form>
 
+    <br>
+</div>
+</div>
+</div>
 </html>

@@ -81,27 +81,44 @@
         }
     </style>
      <div class="profile">
-        <img src="images/user.png" alt="Profile Picture">
-        <h1>sdfsf </p>
-        <p>Adarsh Motors</p>
-        <p>Adarsh Motors is a car dealership company that sells used cars. It is located in the heart of the city, Kathmandu. It has been serving its customers since 2010. It has a wide range of cars to choose from. It has a very good reputation in the market. It has a very good customer service. It has a very good reputation in the market. It has a very good customer service. It has a very good reputation in the market. It has a very good customer service.</p>
-        <p><button>Contact</button></p>
+     <?php
+session_start(); 
+
+include('dbconnection.php');
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+if (isset($_SESSION['useremail'])) {
+    $user_email = $_SESSION['useremail'];
+
+    $sql = "SELECT user_name, user_phone, user_email, user_ocu, user_add, user_img FROM user WHERE user_email = '$user_email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+       
+        while ($row = $result->fetch_assoc()) {
+            echo "<br>";
+            echo '<img src="user/userimg/' . $row['user_img'] . '" alt="Profile Picture"><br>';
+            echo "<p>Name: " . $row['user_name'] . "<br>";
+            echo "<p>Phone: " . $row['user_phone'] . "<br>";
+            echo "<p>Email: " . $row['user_email'] . "<br>";
+            echo "<p>Occupation: " . $row['user_ocu'] . "<br>";
+            echo "<p>Address: " . $row['user_add'] . "<br>";
+        }
+    } else {
+        echo "No user found in the database with this email.";
+    }
+} else {
+    echo "User email not set in the session.";
+}
+$conn->close();
+?>
     </div>
     </div>
 </div>
 
 </html>
-<?php
-session_start(); 
-if (isset($_SESSION['useremail'])) {
-    echo "User Email: " . $_SESSION['useremail'];
-} else {
-    echo "User email not set in the session.";
-}
-echo "<br>";
-if (isset($_SESSION['username'])) {
-    echo "Username: " . $_SESSION['username'];
-} else {
-    echo "Username not set in the session.";
-}
-?>
+
+

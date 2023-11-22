@@ -79,10 +79,42 @@
         }
 </style>
 <div class="profile">
-<img src="admin/modelimg/audi.png" alt="Not found">
-<h1>Update Data</h1>
-<p>Update the data of the car</p>
-<a href="userupdate.php" class="btn btn-primary">Update Data</a>
+<form>
+    <h5>-->Update Image</h5>
+    <input type="file" name="" id="">
+    <br>
+    <br>    
+    <button type="button" class="btn btn-success">Update Image</button>
+    </form>
+    <br>
+    <form action="">
+    <h5>-->Update Address</h5>
+    <input type="text" name="" id="" placeholder="Update Address">
+    <br><br>
+    <button type="button"  class="btn btn-success">Update Address</button>
+    </form>
+    <br>
+    <form action="">
+    <h5>-->Update Occupation</h5>
+    <input type="text" name="" id="" placeholder="Update Occupation">
+    <br><br>
+    <button type="button"  class="btn btn-success">Update Occupation</button>
+    </form>
+    <br>
+    <form action="">
+    <h5>-->Update Phone Number</h5>
+    <input type="text" name="" id="" placeholder="Update Number">
+    <br><br>
+    <button type="button"  class="btn btn-success">Update Number</button>
+    </form>
+    <br>
+    <form action="">
+    <h5>-->Update Name</h5>
+    <input type="text" name="" id="" placeholder="Update Occupation">
+    <br><br>
+    <button type="button"  class="btn btn-success">Update Name</button>
+    </form>
+    <br>
 </div>
 </div>
 </div>
