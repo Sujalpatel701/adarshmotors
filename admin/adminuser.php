@@ -70,18 +70,37 @@
     <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Lauyh</th>
-      <th scope="col">Handle</th>
+      <th scope="col">User_name</th>
+      <th scope="col">User_phone</th>
+      <th scope="col">User_email</th>
+      <th scope="col">User_address</th>
+      <th scope="col">User_occupation</th>
+      <th scope="col">User_image</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <?php
+      include("dbconnect.php");
+        $sql="SELECT * FROM `user`";
+        $result=mysqli_query($conn,$sql);
+        while($row=mysqli_fetch_assoc($result)){
+          $user_name=$row['user_name'];
+          $user_phone=$row['user_phone'];
+          $user_email=$row['user_email'];
+          $user_add=$row['user_add'];
+          $user_ocu=$row['user_ocu'];
+          $user_img=$row['user_img'];
+          echo '<tr>
+          <td>'.$user_name.'</td>
+          <td>'.$user_phone.'</td>
+          <td>'.$user_email.'</td>
+          <td>'.$user_add.'</td>
+          <td>'.$user_ocu.'</td>
+          <td><img src="../user/userimg/' . $user_img . '" alt="User Image" style="width: 150px;"></td>
+          </tr>';
+        }
+      ?>
     </tr>
   </tbody>
 </table>

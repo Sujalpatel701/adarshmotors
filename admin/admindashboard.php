@@ -70,17 +70,41 @@
         </nav>
         <div> 
             <div class="card-body">
-                    <h4 class="card-title">Number of brand</h4>
-                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
+                <?php
+                    include('../dbconnection.php');
+                    $sql = "SELECT * FROM `user`";
+                    $result = mysqli_query($conn, $sql);
+                    $row = mysqli_num_rows($result);
+                    echo '<h4 class="card-title">Number of Users</h4>';
+                    echo '<label style="font-size: 30px;">-->'.$row.'</label>';
+
+                    $sql1 = "SELECT * FROM `feedback`";
+                    $result1 = mysqli_query($conn, $sql1);
+                    $row1 = mysqli_num_rows($result1);
+                    echo '<h4 class="card-title">Number of Feedbacks</h4>';
+                    echo '<span style="font-size: 30px;">-->'.$row1.'</span>';
+
+                    $sql2 = "SELECT * FROM `brand`";
+                    $result2 = mysqli_query($conn, $sql2);
+                    $row2 = mysqli_num_rows($result2);
+                    echo '<h4 class="card-title">Number of Brands</h4>';
+                    echo '<span style="font-size: 30px;">-->'.$row2.'</span>';
+
+                    $sql3 = "SELECT * FROM `model`";
+                    $result3 = mysqli_query($conn, $sql3);
+                    $row3 = mysqli_num_rows($result3);
+                    echo '<h4 class="card-title">Number of Models</h4>';
+                    echo '<span style="font-size: 30px;">-->'.$row3.'</span>';
+
+                    $sql4 = "SELECT * FROM `part`";
+                    $result4 = mysqli_query($conn, $sql4);
+                    $row4 = mysqli_num_rows($result4);
+                    echo '<h4 class="card-title">Number of Parts</h4>';
+                    echo '<span style="font-size: 30px;">-->'.$row4.'</span>';
+
+                ?>
             </div>
-            <div class="card-body">
-                    <h4 class="card-title">Number of Model</h4>
-                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
-            </div>  
-            <div class="card-body">
-                    <h4 class="card-title">Number of Parts</h4>
-                    <a href="#" class="btn btn-primary">check</a><span style="font-size: 30px;">-->sdfgberfgb</span>
-            </div>      
+          
     </div>
 </div>
 

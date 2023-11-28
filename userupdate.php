@@ -79,58 +79,46 @@
         }
 </style>
 <div class="profile">
-<form>
+<form enctype="multipart/form-data" action="useruploadimg.php" method="post">
     <h5>-->Update Image</h5>
-    <input type="file" name="" id="">
+    <input type="file" name="imageUpload" id="imageUpload">
     <br>
     <br>    
-    <button type="button" class="btn btn-success">Update Image</button>
-    </form>
+    <button type="submit" class="btn btn-success">Update Image</button>
+</form>
     <br>
-    <form action="">
+    <form action="addaddress.php" method="post">
     <h5>-->Update Address</h5>
-    <input type="text" name="" id="" placeholder="Update Address">
+    <input type="text" name="address" id="address" placeholder="Update Address" required>
     <br><br>
-    <button type="button"  class="btn btn-success">Update Address</button>
-    </form>
-    <br>
-    <form action="">
-    <h5>-->Update Occupation</h5>
-    <input type="text" name="" id="" placeholder="Update Occupation">
-    <br><br>
-    <button type="button"  class="btn btn-success">Update Occupation</button>
-    </form>
-    <br>
-    <form action="">
-    <h5>-->Update Phone Number</h5>
-    <input type="text" name="" id="" placeholder="Update Number">
-    <br><br>
-    <button type="button"  class="btn btn-success">Update Number</button>
-    </form>
-    <br>
-    <form action="">
-    <h5>-->Update Name</h5>
-    <input type="text" name="" id="" placeholder="Update Occupation">
-    <br><br>
-    <button type="button"  class="btn btn-success">Update Name</button>
-    </form>
-    <br>
-</div>
-</div>
-</div>
-<?php
-session_start(); 
-if (isset($_SESSION['useremail'])) {
-    echo "User Email: " . $_SESSION['useremail'];
-} else {
-    echo "User email not set in the session.";
-}
-echo "<br>";
-if (isset($_SESSION['username'])) {
-    echo "Username: " . $_SESSION['username'];
-} else {
-    echo "Username not set in the session.";
-}
-?>
+    <button type="submit" class="btn btn-success">Update Address</button>
+</form>
 
+    <br>
+    <form action="addoccu.php" method="post">
+    <h5>-->Update Occupation</h5>
+    <input type="text" name="occupation" id="occupation" placeholder="Update Occupation" required>
+    <br><br>
+    <button type="submit" class="btn btn-success">Update Occupation</button>
+</form>
+    <br>
+    <form action="updatephone.php" method="post">
+    <h5>-->Update Phone Number</h5>
+    <input type="text" name="phoneNumber" id="phoneNumber" placeholder="Update Number" required>
+    <br><br>
+    <button type="submit" class="btn btn-success">Update Number</button>
+</form>
+
+    <br>
+    <form action="updatename.php" method="post">
+    <h5>-->Update Name</h5>
+    <input type="text" name="userName" id="userName" placeholder="Update Name" required>
+    <br><br>
+    <button type="submit" class="btn btn-success">Update Name</button>
+</form>
+
+    <br>
+</div>
+</div>
+</div>
 </html>

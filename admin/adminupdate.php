@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="jquery.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -68,84 +69,42 @@
             </div>
         </nav>
     <div>
+  
     <div class="form-group">
-  <form action="">
-    <h5>--> FOR Updating Brand</h5>
-    <label for="updateBrandSelect">Select Brand</label>
-    <select class="form-control" id="updateBrandSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="">Change name:</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Brand name">
-    <input type="file" class="form-control-file" id="logo of brand">
-    <br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Brand</button>
-  </form>
+    <form id="updateformpart">
+        
+    <h5>--> FOR updating Part</h5>
+    <label for="updatebrand">Brand Name</label>
+    <input type="text" class="form-control" id="updatebrand" name="updatebrand" placeholder="Enter Brand name">
+    <span id="brandAvailability"></span><br>
+        
+    <label for="updatemodel">Model Name</label>
+    <input type="text" class="form-control" id="updatemodel" name="updatemodel" placeholder="Enter Model name">
+    <span id="modelAvailability"></span><br>
+
+    <label for="updatepart">Part Name</label>
+    <input type="text" class="form-control" id="updatepart" name="updatepart" placeholder="Enter Part name">
+    <span id="partAvailability"></span><br>
+
+        <label for="updatepart">Part Price</label>
+        <input type="text" class="form-control" id="updateprice" name="updateprice" placeholder="Enter Part price">
+        <span id="updateprice"></span><br>
+
+        <label for="updatepart">Part Description</label>
+        <input type="text" class="form-control" id="updatedesc" name="updatedesc" placeholder="Enter Part description">
+        <span id="updatedesc"></span><br>
+
+        <label for="updatepart">Part Image</label>
+        <input type="file" class="form-control-file" id="updateimage" name="updateimage" placeholder="Enter Part image">
+        <span id="updateimage"></span><br>
+
+        <button type="submit" class="btn btn-danger" onclick="updatePart()">Update Part</button>
+    </form>
 </div>
-<div class="form-group">
-  <form action="">
-    <h5>--> FOR Updating Model</h5>
-    <label for="updateModelBrandSelect">Select Brand</label>
-    <select class="form-control" id="updateModelBrandSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="updateModelSelect">Select Model</label>
-    <select class="form-control" id="updateModelSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="">Change name:</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Model name">
-    <input type="file" class="form-control-file" id="logo of brand">
-    <br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Model</button>
-  </form>
-</div>
-<div class="form-group">
-  <form action="">
-    <h5>--> FOR Updating Part</h5>
-    <label for="updatePartBrandSelect">Select Brand</label>
-    <select class="form-control" id="updatePartBrandSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="updatePartModelSelect">Select Model</label>
-    <select class="form-control" id="updatePartModelSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="updatePartSelect">Select Part</label>
-    <select class="form-control" id="updatePartSelect">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-    <label for="">Change name:</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="New Part name">
-    <input type="file" class="form-control-file" id="logo of brand">
-    <br>
-    <button type="button" class="btn btn-primary" data-dismiss="modal">Update Part</button>
-  </form>
-</div>
+
+<script src="updatepartcheck.js"></script>
+<script src="updatebrandcheck.js"></script>
+<script src="updatemodelcheck.js"></script>
 </div>
 </div>
 </div>
