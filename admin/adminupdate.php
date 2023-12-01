@@ -72,12 +72,14 @@
   
     <div class="form-group">
     <form id="updateformpart">
-        
+
     <h5>--> FOR updating Part</h5>
+    <h6>(with reference to Brand, Model and Part)</h6>
+
     <label for="updatebrand">Brand Name</label>
     <input type="text" class="form-control" id="updatebrand" name="updatebrand" placeholder="Enter Brand name">
     <span id="brandAvailability"></span><br>
-        
+
     <label for="updatemodel">Model Name</label>
     <input type="text" class="form-control" id="updatemodel" name="updatemodel" placeholder="Enter Model name">
     <span id="modelAvailability"></span><br>
@@ -86,21 +88,124 @@
     <input type="text" class="form-control" id="updatepart" name="updatepart" placeholder="Enter Part name">
     <span id="partAvailability"></span><br>
 
-        <label for="updatepart">Part Price</label>
-        <input type="text" class="form-control" id="updateprice" name="updateprice" placeholder="Enter Part price">
-        <span id="updateprice"></span><br>
-
-        <label for="updatepart">Part Description</label>
-        <input type="text" class="form-control" id="updatedesc" name="updatedesc" placeholder="Enter Part description">
-        <span id="updatedesc"></span><br>
-
-        <label for="updatepart">Part Image</label>
-        <input type="file" class="form-control-file" id="updateimage" name="updateimage" placeholder="Enter Part image">
-        <span id="updateimage"></span><br>
-
-        <button type="submit" class="btn btn-danger" onclick="updatePart()">Update Part</button>
     </form>
+
+
+
+
+    <form id="priceForm">
+    <label for="updateprice">Part Price</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="updateprice" name="updateprice" placeholder="Enter Part price">
+        <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button" onclick="
+                var brand = document.getElementById('updatebrand').value;
+                var model = document.getElementById('updatemodel').value;
+                var part = document.getElementById('updatepart').value;
+                var price = document.getElementById('updateprice').value;
+
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'updatepartprice.php', 
+                    data: {
+                        brand: brand,
+                        model: model,
+                        part: part,
+                        price: price
+                    },
+                    success: function(response) {
+                        alert(response);
+                        document.getElementById('updateprice').innerHTML = response;
+                    },
+                    error: function() {
+                        alert('Error occurred while processing the request.');
+                    }
+                });
+            ">Button</button>
+        </span>
+    </div>
+</form>
+<span id="updateprice"></span><br>
+
+<form id="descForm">
+    <label for="updatedesc">Part Description</label>
+    <div class="input-group">
+        <input type="text" class="form-control" id="updatedesc" name="updatedesc" placeholder="Enter Part description">
+        <span class="input-group-btn">
+            <button class="btn btn-secondary" type="button" onclick="
+                var brand = document.getElementById('updatebrand').value;
+                var model = document.getElementById('updatemodel').value;
+                var part = document.getElementById('updatepart').value;
+                var desc = document.getElementById('updatedesc').value;
+
+                // Validate input if needed
+
+                // Use AJAX to send data to the server
+                $.ajax({
+                    type: 'POST',
+                    url: 'updatepartdesc.php', // Replace with the actual server-side script
+                    data: {
+                        brand: brand,
+                        model: model,
+                        part: part,
+                        description: desc
+                    },
+                    success: function(response) {
+                        alert(response);
+                        document.getElementById('updatedesc').innerHTML = response;
+                    },
+                    error: function() {
+                        alert('Error occurred while processing the request.');
+                    }
+                });
+            ">Button</button>
+        </span>
+    </div>
+</form>
+<span id="updatedesc"></span><br>
+
+
+
+<form id="imageForm">
+    <label for="updateimage">Part Image</label>
+    <div class="d-flex">
+        <input type="file" class="form-control-file" id="updateimage" name="updateimage" placeholder="Enter Part image">
+        <button class="btn btn-secondary ml-2" type="button" onclick="
+            var brand = document.getElementById('updatebrand').value;
+            var model = document.getElementById('updatemodel').value;
+            var part = document.getElementById('updatepart').value;
+            var fileInput = document.getElementById('updateimage');
+            var file = fileInput.files[0];
+
+            var formData = new FormData();
+            formData.append('brand', brand);
+            formData.append('model', model);
+            formData.append('part', part);
+            formData.append('image', file);
+
+            $.ajax({
+                type: 'POST',
+                url: 'updatepartimage.php',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    alert(response);
+                },
+                error: function() {
+                    alert('Error occurred while processing the request.');
+                }
+            });
+        ">Button</button>
+    </div>
+</form>
+
+
+
+
 </div>
+
 
 <script src="updatepartcheck.js"></script>
 <script src="updatebrandcheck.js"></script>
